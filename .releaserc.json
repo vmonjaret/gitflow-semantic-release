@@ -1,0 +1,13 @@
+{
+    "release": {
+        "branches": [
+            {
+                "name": "master"
+            },
+            {
+                "name": "release-*",
+                "prerelease": true
+            }
+        ]
+    }
+}

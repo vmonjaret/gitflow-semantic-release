@@ -1,0 +1,12 @@
+{
+  "name": "gitflow-semantic-release",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vmonjaret/gitflow-semantic-release.git",
+  "author": "Vincent Monjaret <vmonjaret@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "semantic-release": "^19.0.2"
+  }
+}
