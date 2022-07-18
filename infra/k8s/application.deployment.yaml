@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application
+  namespace: default
+  labels:
+    app: application
+spec:
+  selector:
+    matchLabels:
+      app: application
+  template:
+    metadata:
+      labels:
+        app: application
+    spec:
+      containers:
+        - name: application
+          image: application:latest
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+              name: application
+      restartPolicy: Always

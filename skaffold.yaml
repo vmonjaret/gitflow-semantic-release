@@ -1,0 +1,23 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+metadata:
+  name: gitflow-semantic-release
+build:
+  local:
+    useBuildkit: true
+    push: false
+  artifacts:
+    - context: .
+      image: application
+      docker:
+        dockerfile: Dockerfile
+        target: development
+      sync:
+        manual:
+          - dest: .
+            src: src/**/*.ts
+deploy:
+  kubectl:
+    manifests:
+      - infra/k8s/*.deployment.yaml
+      - infra/k8s/*.service.yaml
